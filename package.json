@@ -1,0 +1,81 @@
+{
+  "name": "00-starter-website",
+  "version": "0.1.0",
+  "description": "Starter for simple website",
+  "private": true,
+  "engines": {
+    "node": ">=8",
+    "npm": ">=4"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 0.2%",
+    "not dead"
+  ],
+  "scripts": {
+    "clean": "shx rm -rf dist",
+    "dirs": "shx mkdir -p dist/css dist/js dist/vendor",
+    "dev": "run-p dev:*",
+    "dev:html": "shx cp src/*.html dist/",
+    "dev:scss": "node-sass --output-style expanded --source-map true src/scss/style.scss dist/css/style.css",
+    "dev:js": "babel src/js --source-maps inline --out-file dist/js/script.js",
+    "build": "run-s test build:*",
+    "build:html": "html-minifier --config-file .htmlminifierrc.json --output dist/index.html src/*.html",
+    "build:scss": "node-sass --output-style compressed src/scss/style.scss dist/css/style.min.css",
+    "build:prefix": "postcss dist/css/style.min.css --use autoprefixer --no-map --replace",
+    "build:js": "babel src/js --out-file dist/js/script.js",
+    "vendor": "shx cp -r vendor/**/* dist/vendor/ || true",
+    "build:uglify": "uglifyjs dist/js/script.js --output dist/js/script.min.js --compress --mangle",
+    "watch": "run-p watch:* serve",
+    "watch:vendor": "onchange \"vendor/**/*\" -- run-s vendor",
+    "watch:html": "onchange \"src/**/*.html\" -- run-s dev:html",
+    "watch:scss": "onchange \"src/**/*.scss\" -- run-s dev:scss",
+    "watch:js": "onchange \"src/**/*.js\" -- run-s dev:js",
+    "serve": "browser-sync start --server \"dist\" --files \"dist\"",
+    "lint": "run-s lint:*",
+    "lint:html": "html5v \"src/*.html\"",
+    "lint:scss": "stylelint \"src/scss/**/*.scss\" --syntax scss",
+    "lint:js": "eslint \"src/js/**\"",
+    "start": "run-s clean dirs dev watch",
+    "pretest": "npm run lint",
+    "test": "shx echo \"Tests passed\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mnap00/00-starter-website.git"
+  },
+  "keywords": [
+    "webpage",
+    "html5",
+    "sass",
+    "es6",
+    "babel",
+    "eslint"
+  ],
+  "author": "mnap00",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mnap00/00-starter-website/issues"
+  },
+  "homepage": "https://github.com/mnap00/00-starter-website#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.0.2",
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.6",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "^2.24.6",
+    "eslint": "^5.2.0",
+    "eslint-plugin-flowtype": "^2.50.0",
+    "html-minifier": "^3.5.19",
+    "html5-validator": "^1.2.1",
+    "node-sass": "^4.9.2",
+    "npm-run-all": "^4.1.3",
+    "onchange": "^4.1.0",
+    "postcss-cli": "^6.0.0",
+    "shx": "^0.3.2",
+    "stylelint": "^9.4.0",
+    "stylelint-config-sass-guidelines": "^5.0.0",
+    "stylelint-config-standard": "^18.2.0",
+    "uglify-js": "^3.4.6"
+  }
+}
