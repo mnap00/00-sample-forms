@@ -1,0 +1,12 @@
+@import 'variables';
+@import 'normalizer';
+@import 'dropdown';
+
+body {
+  color: $color-primary;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: $max-width;
+}
