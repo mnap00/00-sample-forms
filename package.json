@@ -1,7 +1,7 @@
 {
-  "name": "00-starter-website",
+  "name": "k-test",
   "version": "0.1.0",
-  "description": "Starter for simple website",
+  "description": "Test K Template",
   "private": true,
   "engines": {
     "node": ">=8",
@@ -20,7 +20,7 @@
     "dev:scss": "node-sass --output-style expanded --source-map true src/scss/style.scss dist/css/style.css",
     "dev:js": "babel src/js --source-maps inline --out-file dist/js/script.js",
     "build": "run-s test build:*",
-    "build:html": "html-minifier --config-file .htmlminifierrc.json --output dist/index.html src/*.html",
+    "build:html": "html-minifier --config-file .htmlminifierrc.json --input-dir src/ --output-dir dist/",
     "build:scss": "node-sass --output-style compressed src/scss/style.scss dist/css/style.min.css",
     "build:prefix": "postcss dist/css/style.min.css --use autoprefixer --no-map --replace",
     "build:js": "babel src/js --out-file dist/js/script.js",
@@ -42,7 +42,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/mnap00/00-starter-website.git"
+    "url": "git+ssh://git@gitlab.com/mnap/k-test.git"
   },
   "keywords": [
     "webpage",
@@ -52,12 +52,12 @@
     "babel",
     "eslint"
   ],
-  "author": "mnap00",
+  "author": "mnap",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mnap00/00-starter-website/issues"
+    "url": "https://gitlab.com/mnap/k-test/issues"
   },
-  "homepage": "https://github.com/mnap00/00-starter-website#readme",
+  "homepage": "https://gitlab.com/mnap/k-test#readme",
   "devDependencies": {
     "autoprefixer": "^9.0.2",
     "babel-cli": "^6.26.0",
