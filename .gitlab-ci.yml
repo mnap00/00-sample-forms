@@ -11,8 +11,9 @@ pages:
   - npm install
   - npm run dirs
   - npm run build
+  - cp -rT dist public
   artifacts:
     paths:
-    - dist
+    - public
   only:
     - master
