@@ -13,13 +13,9 @@
 
 .custom-wrapper {
   background-color: $color-primary;
-  margin-bottom: 1em;
-  -webkit-font-smoothing: antialiased;
   height: 2.1em;
+  margin-bottom: 1em;
   overflow: hidden;
-  -webkit-transition: height 0.5s;
-  -moz-transition: height 0.5s;
-  -ms-transition: height 0.5s;
   transition: height 0.5s;
 }
 
@@ -28,47 +24,35 @@
 }
 
 .custom-toggle {
-  width: 34px;
+  display: none;
   height: 34px;
   position: absolute;
-  top: 0;
   right: 0;
-  display: none;
+  top: 0;
+  width: 34px;
 }
 
 .custom-toggle .bar {
   background-color: $color-accent;
-  display: block;
-  width: 20px;
-  height: 2px;
   border-radius: 100px;
+  display: block;
+  height: 2px;
   position: absolute;
-  top: 18px;
   right: 7px;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
+  top: 18px;
   transition: all 0.5s;
+  width: 20px;
 }
 
 .custom-toggle .bar:first-child {
-  -webkit-transform: translateY(-6px);
-  -moz-transform: translateY(-6px);
-  -ms-transform: translateY(-6px);
   transform: translateY(-6px);
 }
 
 .custom-toggle.x .bar {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
 .custom-toggle.x .bar:first-child {
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
