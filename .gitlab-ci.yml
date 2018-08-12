@@ -1,6 +1,8 @@
 # https://about.gitlab.com/2016/04/07/gitlab-pages-setup/
 
-image: node:8-slim
+image:
+  - node:8-slim
+  - openjdk:8-jre-slim
 
 pages:
   cache:
