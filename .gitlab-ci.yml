@@ -8,6 +8,7 @@ pages:
     - node_modules/
 
   script:
+  - apt-get update && apt-get install default-jre-headless openjdk-8-jre-headless
   - npm install
   - npm run dirs
   - npm run build
