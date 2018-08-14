@@ -35,7 +35,6 @@
     "watch:js": "onchange \"src/**/*.js\" -- run-s dev:js",
     "serve": "browser-sync start --server \"dist\" --files \"dist\"",
     "lint": "run-s lint:*",
-    "lint:html-index": "html5v src/index.html",
     "lint:html": "html-validate src/*.html",
     "lint:scss": "stylelint \"src/scss/**/*.scss\" --syntax scss",
     "lint:js": "eslint \"src/js/**\"",
