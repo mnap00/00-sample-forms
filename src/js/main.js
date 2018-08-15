@@ -9,7 +9,7 @@
       : 'resize';
 
   const toggleHorizontal = () => {
-    const array = [
+    let array = [
       ...document.getElementById('menu')
         .querySelectorAll('.custom-can-transform')
     ];
