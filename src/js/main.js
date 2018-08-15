@@ -1,15 +1,21 @@
-/* https://purecss.io/layouts/tucked-menu-vertical/ */
+/*
+ * PureCSS example vertical menu rewritten in ES6
+ * https://purecss.io/layouts/tucked-menu-vertical/
+ */
 (() => {
   const menu = document.getElementById('menu'),
-    WINDOW_CHANGE_EVENT = ('onorientationchange' in window) ? 'orientationchange':'resize';
+    WINDOW_CHANGE_EVENT = ('onorientationchange' in window)
+      ? 'orientationchange'
+      : 'resize';
 
   const toggleHorizontal = () => {
-    [].forEach.call(
-      document.getElementById('menu').querySelectorAll('.custom-can-transform'),
-      (el) => {
-        el.classList.toggle('pure-menu-horizontal');
-      }
-    );
+    const array = [
+      ...document.getElementById('menu')
+        .querySelectorAll('.custom-can-transform')
+    ];
+    for (let el of array) {
+      el.classList.toggle('pure-menu-horizontal');
+    }
   };
 
   const toggleMenu = () => {
