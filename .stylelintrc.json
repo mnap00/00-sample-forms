@@ -11,6 +11,7 @@
       {
         "message": "Class names should match the BEM hyphenated naming convention"
       }
-    ]
+    ],
+    "max-nesting-depth": "3"
   }
 }
