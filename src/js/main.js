@@ -1,6 +1,7 @@
 /*
  * PureCSS example vertical menu rewritten in ES6
  * https://purecss.io/layouts/tucked-menu-vertical/
+ * horizontal toggle removed
  */
 (() => {
   const menu = document.getElementById('menu'),
@@ -8,31 +9,14 @@
       ? 'orientationchange'
       : 'resize';
 
-  const toggleHorizontal = () => {
-    let array = [
-      ...document.getElementById('menu')
-        .querySelectorAll('.custom-can-transform')
-    ];
-    for (let el of array) {
-      el.classList.toggle('pure-menu-horizontal');
-    }
-  };
-
   const toggleMenu = () => {
-    // set timeout so that the panel has a chance to roll up
-    // before the menu switches states
-    if (menu.classList.contains('open')) {
-      setTimeout(toggleHorizontal, 500);
-    }
-    else {
-      toggleHorizontal();
-    }
-    menu.classList.toggle('open');
-    document.getElementById('toggle').classList.toggle('x');
+    menu.classList.toggle('header--open');
+    document.getElementById('toggle')
+      .classList.toggle('navbar__toggle--x');
   };
 
   const closeMenu = () => {
-    if (menu.classList.contains('open')) {
+    if (menu.classList.contains('header--open')) {
       toggleMenu();
     }
   };
