@@ -1,9 +1,20 @@
-$color-primary: #1b291a;
-$color-accent: #40e0d0;
-$color-light: #5b6c5a;
-$color-shadow: #364135;
+// colors
+$color-black: #000;
+$color-white: #fff;
 
-$color-anthracite: #364135;
-$color-turquoise: #40e0d0;
+$color-primary: #212121;
+$color-p-light: #484848;
+$color-p-dark: $color-black;
 
-$max-width: 900px;
+$color-secondary: #fafafa;
+$color-s-light: $color-white;
+$color-s-dark: #c7c7c7;
+
+$color-accent: $color-secondary;
+
+// sizes
+$max-width: 1280px;
+$base-height: 2em;
+
+// miscellaneous
+$menu-items: 3;

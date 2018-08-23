@@ -1,11 +1,4 @@
+@import 'fix';
 @import 'variables';
 @import 'dropdown';
-
-body {
-  color: $color-primary;
-}
-
-.container {
-  margin: 0 auto;
-  max-width: $max-width;
-}
+@import 'k-test';
