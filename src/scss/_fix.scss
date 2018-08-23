@@ -6,14 +6,16 @@
 
 html {
   box-sizing: border-box;
+  /* stylelint-disable property-no-vendor-prefix */
+  -webkit-tap-highlight-color: transparent;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: transparent;
+  /* stylelint-enable */
 }
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
