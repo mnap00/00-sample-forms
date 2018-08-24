@@ -30,7 +30,7 @@
     "vendor:copy": "shx cp -r vendor/**/* dist/vendor/ || true",
     "vendor:css-minify": "postcss dist/vendor/**/*.css --use cssnano --replace || true",
     "watch": "run-p watch:* serve",
-    "watch:image": "onchante \"src/images/*\" -- run-s image:*",
+    "watch:image": "onchange \"src/images/*\" -- run-s image:*",
     "watch:vendor": "onchange \"vendor/**/*\" -- run-s vendor:*",
     "watch:html": "onchange \"src/**/*.html\" -- run-s dev:html",
     "watch:scss": "onchange \"src/**/*.scss\" -- run-s dev:scss",
