@@ -21,7 +21,7 @@
     "dev:js": "babel src/js --source-maps inline --out-file dist/js/main.js",
     "build": "run-s clean dirs test build:*",
     "build:assets": "run-s image:* vendor:*",
-    "build:html": "html-minifier --config-file .htmlminifierrc.json --input-dir src/ --output-dir dist/",
+    "build:html": "html-minifier --file-ext html --config-file .htmlminifierrc.json --input-dir src/ --output-dir dist/",
     "build:scss": "node-sass --output-style compressed src/scss/main.scss dist/css/main.css",
     "build:prefix": "postcss dist/css/main.css --use autoprefixer --no-map --replace",
     "build:js": "babel src/js --out-file dist/js/main.js",
