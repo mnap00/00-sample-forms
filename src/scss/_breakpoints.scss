@@ -1,0 +1,14 @@
+// Breakpoints copied from PureCSS relative units
+// with 1em == 16px equivalent
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 35.5em; // 568px
+
+// Small tablets (portrait view)
+$screen-md-min: 48em; // 768px
+
+// Tablets and small desktops
+$screen-lg-min: 64em; // 1024px
+
+// Large tablets and desktops
+$screen-xl-min: 80em; // 1280px
