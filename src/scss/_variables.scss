@@ -11,10 +11,12 @@ $color-s-light: $color-white;
 $color-s-dark: #c7c7c7;
 
 $color-accent: $color-secondary;
+$color-accent-dim: &color-s-dark;
 
 // sizes
-$max-width: 1280px;
+$max-width: 80em;
 $base-height: 2em;
+$large-height: 3em;
 
-// miscellaneous
+// miscellaneous & website specific
 $menu-items: 3;
