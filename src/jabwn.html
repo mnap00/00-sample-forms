@@ -36,32 +36,49 @@
     </nav>
   </header>
 
-  <section class="form">
-    <h1>Jabwn test page</h1>
-    <form enctype="multipart/form-data" action="https://formsapi.jabwn.com/key/54XsJAzSRGWy7tAtOM4M" method="post">
-      <input type="hidden" name="_subject" value="Sent from K-Test's Jabwn contact form">
-      <input type="hidden" name="_replyto" value="%email">
-      <!--input type="hidden" name="_after" value="http://localhost:3000/thanks.html"-->
-      <input type="hidden" name="_confirmation" value="<p>Thank you, we have received your information and will contact you asap.</p><p>Press button below to return to website.</p>">
-      <input type="hidden" name="_valid[name]" value="required">
-      <input type="hidden" name="_valid[email]" value="required|valid_email">
-      <input type="hidden" name="_valid[message]" value="required">
-      <input type="text" name="_honey" value="" class="is--hidden">
-      <input type="text" name="name" placeholder="Your name">
-      <input type="email" name="email" placeholder="Your email address">
-      <textarea name="message" placeholder="Your message"></textarea>
-      <input type="file" name="file">
-      <p>
-        <strong>Allowed file types: </strong>
-        pdf, docx, xlsx, csv, txt, rtf, zip, jpg, jpeg, png, gif
-      </p>
-      <p>
-        <strong>Maximum file size: </strong>
-        2MB
-      </p>
-      <input type="submit" value="Send">
-    </form>
-  </section>
+  <main class=main>
+
+    <section class="form">
+      <div class="form__description">
+        <h2 class="form__heading">Jabwn Contact Form</h2>
+        <p class="form__text">Here you can leave us your message. You can attach a nice photo of a kitten.</p>
+        <p class="form__text">You should be redirected to a friendly webpage which allows you to go back to the home page.</p>
+      </div>
+      <form class="form__body" enctype="multipart/form-data" action="https://formsapi.jabwn.com/key/54XsJAzSRGWy7tAtOM4M" method="post">
+        <input class="form__input--hidden" type="hidden" name="_subject" value="Sent from K-Test's Jabwn contact form">
+        <input class="form__input--hidden" type="hidden" name="_replyto" value="%email">
+        <!--input type="hidden" name="_after" value="http://localhost:3000/thanks.html"-->
+        <input class="form__input--hidden" type="hidden" name="_confirmation" value="<h2 class='form__heading'>Thank you, we have received your message!</h2><p class='form__text'>We will contact you ASAP. Press button below to return to previous page.</p>">
+        <input class="form__input--hidden" type="hidden" name="_valid[name]" value="required">
+        <input class="form__input--hidden" type="hidden" name="_valid[email]" value="required|valid_email">
+        <input class="form__input--hidden" type="hidden" name="_valid[message]" value="required">
+        <input class="form__input--hidden" type="text" name="_honey" value="">
+        <div class="form__user">
+          <label class="form__label" for="name">Name:</label>
+          <input class="form__input" id="name" type="text" name="name" placeholder="Your name">
+          <label class="form__label" for="email">Email:</label>
+          <input class="form__input" id="email" type="email" name="email" placeholder="Your email address">
+        </div>
+        <div class="form__message">
+          <label class="form__label" for="message">Message:</label>
+          <textarea class="form__textarea" id="message" name="message" placeholder="Your message"></textarea>
+        </div>
+        <div class="form__file">
+          <input class="form__input" id="file" type="file" name="file" placeholder="i">
+          <p class="form__note">
+            <strong>Allowed formats: </strong>
+            pdf, docx, xlsx, csv, txt, rtf, zip, jpg, jpeg, png, gif
+          </p>
+          <p class="form__note">
+            <strong>Maximum file size: </strong>
+            2MB
+          </p>
+        </div>
+        <input class="form__button" type="submit" value="Send">
+      </form>
+    </section>
+
+  </main>
 
   <footer class="footer">
     <p>
