@@ -25,6 +25,7 @@
   @include sm {
     flex-direction: row;
     justify-content: space-between;
+    padding-right: 1em;
   }
 
   &__head {
