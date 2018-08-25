@@ -1,3 +1,121 @@
 .form {
+  background-image:
+    url('/images/misty-wood.jpeg'),
+    linear-gradient($color-p-light, $color-s-light);
+  background-size: cover;
   display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 35.5em;
+  padding: 0 1em;
+
+  @include lg {
+    flex-wrap: nowrap;
+    max-width: 64em;
+  }
+
+  &__heading {
+    margin: 1em 0;
+  }
+
+  &__text {
+    line-height: 1.5em;
+    margin-top: 0.5em;
+  }
+
+  &__heading,
+  &__text {
+    @include lg {
+      flex: 1 0 100%;
+    }
+  }
+
+  &__description,
+  &__body {
+    background-color: rgba(250, 250, 250, 0.3);
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1em 0;
+    min-width: 0;
+    padding: 0.5em;
+
+    @include lg {
+      flex: 1 1 100%;
+    }
+  }
+
+  &__description {
+    @include lg {
+      margin-right: 1em;
+      padding-right: 1em;
+    }
+  }
+
+  &__user,
+  &__message,
+  &__file {
+    align-items: center;
+    display: flex;
+    flex: auto;
+    flex-wrap: wrap;
+    min-width: 0;
+  }
+
+  &__label,
+  &__input,
+  &__textarea {
+    flex: 100%;
+  }
+
+  &__label {
+    @include sm {
+      flex: 1 1 25%;
+    }
+  }
+
+  &__textarea {
+    min-height: 6.5em;
+  }
+
+  &__input,
+  &__textarea {
+    font-family: inherit;
+    font-size: 1em;
+    line-height: 1.5em;
+    margin: 0.5em 0;
+    padding: 0.2em;
+
+    @include sm {
+      flex: 1 1 75%;
+    }
+  }
+
+  &__button {
+    background-color: $color-s-dark;
+    border: 0;
+    color: $color-primary;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 1.5em;
+    margin-top: 0.5em;
+    padding: 0.5em;
+    transition: all 0.5s;
+    width: 12em;
+
+    &:hover {
+      background-color: $color-p-light;
+      color: $color-s-dark;
+    }
+  }
+
+  &__note {
+    font-size: 0.8em;
+    margin: 0.4em 0;
+  }
+
+  &__input--hidden {
+    display: none;
+  }
 }
