@@ -36,21 +36,36 @@
     </nav>
   </header>
 
-  <section class="form">
-    <h1>Formspree test page</h1>
-    <form action="https://formspree.io/testme4448@gmail.com" method="POST">
-      <input type="text" name="name" placeholder="Your name">
-      <input type="email" name="_replyto" placeholder="Your email address">
-      <textarea name="message" placeholder="Your message"></textarea>
-      <input type="submit" value="Send">
-      <input type="hidden" name="_next" value="thanks.html">
-      <input type="hidden" name="_subject" value="Sent from K-Test's Formspree contact form">
-      <input type="hidden" name="_cc" value="another@example.com,yetanother@example.com">
-      <input type="hidden" name="_format" value="plain">
-      <input type="hidden" name="_language" value="pl">
-      <input type="text" name="_gotcha" class="is--hidden">
-    </form>
-  </section>
+  <main class="main">
+
+    <section class="form">
+      <div class="form__description">
+        <h1>Formspree Contact Form</h1>
+        <p class="form__text">Here is a basic, free plan Formspree contact form. You can use it for sending up to 1000 messages per month. Possibly that includes spam (though anti spam setup of this form can be a decent one). It needs more tests.</p>
+        <p class="form__text">One cannot attach photo of a cat or use a token number instead of plain address in form markup. Paid plan might offer more features.</p>
+      </div>
+      <form class="form__body" action="https://formspree.io/testme4448@gmail.com" method="POST">
+        <div class="form__user">
+          <label class="form__label" for="name">Name:</label>
+          <input class="form__input" id="name" type="text" name="name" placeholder="Your name">
+          <label class="form__label" for="email">Email:</label>
+          <input class="form__input" id="email" type="email" name="_replyto" placeholder="Your email address">
+        </div>
+        <div class="form__message">
+          <label class="form__label" for="message">Message:</label>
+          <textarea class="form__textarea" id="message" name="message" placeholder="Your message"></textarea>
+        </div>
+        <input class="form__button" type="submit" value="Send">
+        <!--input class="form__input--hidden" type="hidden" name="_next" value="thanks.html"-->
+        <input class="form__input--hidden" type="hidden" name="_subject" value="Sent from K-Test's Formspree contact form">
+        <input class="form__input--hidden" type="hidden" name="_cc" value="another@example.com,yetanother@example.com">
+        <input class="form__input--hidden" type="hidden" name="_format" value="plain">
+        <input class="form__input--hidden" type="hidden" name="_language" value="pl">
+        <input class="form__input--hidden" type="text" name="_gotcha">
+      </form>
+    </section>
+
+  </main>
 
   <footer class="footer">
     <p>
