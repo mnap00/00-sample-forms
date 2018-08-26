@@ -5,13 +5,12 @@
   background-size: cover;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin: 0 auto;
-  max-width: 35.5em;
   padding: 0 1em;
 
   @include lg {
     flex-wrap: nowrap;
-    max-width: 64em;
   }
 
   &__heading {
@@ -26,7 +25,7 @@
   &__heading,
   &__text {
     @include lg {
-      flex: 1 0 100%;
+      flex: 1 1 100%;
     }
   }
 
@@ -36,18 +35,19 @@
     display: flex;
     flex-wrap: wrap;
     margin: 1em 0;
+    max-width: 35.5em;
     min-width: 0;
     padding: 0.5em;
 
     @include lg {
       flex: 1 1 100%;
+      padding: 1em;
     }
   }
 
   &__description {
     @include lg {
-      margin-right: 1em;
-      padding-right: 1em;
+      margin-right: 7em;
     }
   }
 
@@ -56,7 +56,7 @@
   &__file {
     align-items: center;
     display: flex;
-    flex: auto;
+    flex: 1 1 100%;
     flex-wrap: wrap;
     min-width: 0;
   }
@@ -64,7 +64,8 @@
   &__label,
   &__input,
   &__textarea {
-    flex: 100%;
+    flex: 1 1 100%;
+    min-width: 0;
   }
 
   &__label {
