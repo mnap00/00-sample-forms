@@ -1,4 +1,5 @@
 .form {
+  align-items: center;
   background-image:
     url('../images/misty-wood.jpeg'),
     linear-gradient($color-p-light, $color-s-light);
@@ -7,15 +8,16 @@
   flex-wrap: wrap;
   justify-content: center;
   margin: 0 auto;
-  min-height: 100vh;
+  min-height: calc(100vh - #{$large-height});
   padding: 0 1em;
 
   @include lg {
+    align-items: center;
     flex-wrap: nowrap;
   }
 
   &__heading {
-    margin: 1em 0;
+    margin-bottom: 1em;
   }
 
   &__text {
@@ -36,13 +38,14 @@
     background-color: rgba(250, 250, 250, 0.3);
     display: flex;
     flex-wrap: wrap;
-    margin: 1em 0;
     max-width: 35.5em;
     min-width: 0;
     padding: 0.5em;
 
     @include lg {
+      align-content: flex-start;
       flex: 1 1 100%;
+      height: 24em;
       padding: 1em;
     }
   }
@@ -85,7 +88,7 @@
     font-family: inherit;
     font-size: 1em;
     line-height: 1.5em;
-    margin: 0.5em 0;
+    margin-bottom: 0.5em;
     padding: 0.2em;
 
     @include sm {
