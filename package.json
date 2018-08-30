@@ -42,7 +42,7 @@
     "lint:js": "eslint \"src/js/**\"",
     "start": "run-s clean dirs dev watch",
     "pretest": "npm run lint",
-    "test": "shx echo \"Tests passed\""
+    "test": "doiuse --browsers \"last 2 versions, > 0.2%, not dead\""
   },
   "repository": {
     "type": "git",
@@ -67,8 +67,9 @@
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.2.6",
     "babel-preset-env": "^1.7.0",
-    "browser-sync": "^2.24.6",
+    "browser-sync": "^2.24.7",
     "cssnano": "^4.0.5",
+    "doiuse": "^4.1.0",
     "eslint": "^5.2.0",
     "eslint-plugin-flowtype": "^2.50.0",
     "html-minifier": "^3.5.19",
